@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>The Golden Egg — Video Bingo (Demo Reconstruction)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Loading overlay -->
+    <div id="loading">
+      <div class="load-logo">The Golden Egg</div>
+      <div class="load-bar"><div id="load-fill"></div></div>
+      <div id="load-text">Loading…</div>
+    </div>
+
+    <!-- Demo badge -->
+    <div id="demo-badge">DEMO</div>
+
+    <!-- Footer status bar (mirrors the reference wrapper UI) -->
+    <div id="footer">
+      <div id="menu-btn" class="f-btn" title="Menu">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="f-status"><span class="f-label">WIN</span><span id="f-win" class="f-value">€0,00</span></div>
+      <div class="f-status f-demo">DEMO</div>
+      <div class="f-status"><span class="f-label">CREDITS</span><span id="f-credits" class="f-value">€10.000,40</span></div>
+    </div>
+
+    <!-- Slide-in menu -->
+    <div id="side-menu">
+      <div class="sm-item" id="sm-home">⌂<label>Home</label></div>
+      <div class="sm-item" id="sm-help">?<label>Help</label></div>
+      <div class="sm-item" id="sm-sound">♪<label>Sound</label></div>
+      <div class="sm-item" id="sm-full">⛶<label>Fullscreen</label></div>
+    </div>
+
+    <!-- Help / rules modal -->
+    <div id="help-modal" class="modal">
+      <div class="modal-inner">
+        <div class="modal-close" id="help-close">×</div>
+        <div class="modal-scroll">
+          <h2>The Golden Egg Rules</h2>
+          <p>The The Golden Egg video slot is referred to as Golden Egg, The Game or Game.</p>
+          <p>Golden Egg is a Video Bingo game with 1 card. The features of this game are: Turbo and New Card.</p>
+          <p>The game is played with 1 card with 15 numbers on it. First column in the card will display numbers only between 1 and 9 value, second column will display only 10-19, third column will display only 20-29, fourth column will display only 30-39, fifth column will display only 40-49, sixth column will display only 50-59, seventh column will display only 60-69, eighth column will display only 70-79 and last column will display only 80-90.</p>
+          <p>90 balls numbered 1-90 are randomly drawn in each round until 15 numbers matched in a card.</p>
+          <p>Number of balls called will be displayed under "Balls Called" in the panel screen.</p>
+          <p>Card numbers are highlighted with red color on the panel board. Unmatching drawn numbers are highlighted in black color on the panel board. Any numbers on the played card that match those drawn from the machine will be highlighted with white color.</p>
+          <p>Select a stake to play. Change the numbers on the card using the "New Card" button and click "Play" to start to draw.</p>
+          <p>The game can be played faster by pressing the "Turbo" button. Once turbo button is activated it cannot be deactivated for the current game round.</p>
+          <p>The game can be played even faster by pressing the "Instant" (forward icon) button when game is started. Once clicked on "Instant" button, displaying the number of each draw is skipped. Total numbers drawn are displayed in "Balls Called" field. Each drawn number will be highlighted in panel screen (1-90) and win amount will be displayed in pop-up message (if occurs). Once all 15 numbers have been highlighted, wins will be displayed. The top payout will be awarded if the card is complete.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leave confirm modal -->
+    <div id="leave-modal" class="modal">
+      <div class="modal-inner small">
+        <p>You are about to leave the game.<br>Are you sure?</p>
+        <div class="modal-btns">
+          <button id="leave-yes" class="mbtn">YES</button>
+          <button id="leave-no" class="mbtn">NO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.4.2/dist/pixi.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
